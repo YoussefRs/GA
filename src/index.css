@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #ffff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.row, .col {
+  padding: 0 !important;
+  margin: 0 !important;
+}

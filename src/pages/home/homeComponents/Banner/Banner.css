@@ -1,0 +1,121 @@
+.banner {
+  height: 100vh;
+  background-color: #181818;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.bg-wedding {
+  padding: 5rem;
+  height: 100%;
+  width: 100%;
+  background-image: url(../../../../assets/banner/wedding.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+.bg-food {
+  padding: 5rem;
+  height: 100%;
+  width: 100%;
+  background-image: url(../../../../assets/banner/food.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-foo {
+  padding: 5rem;
+  height: 100%;
+  width: 100%;
+  background-image: url(../../../../assets/banner/foo.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.bg-breakfast {
+  padding: 5rem;
+  height: 100%;
+  width: 100%;
+  background-image: url(../../../../assets/banner/breakfast.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.banner-dot-container {
+  margin-top: 20px;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border: 1px solid rgba(218, 160, 93, 0.5);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  & p {
+    position: absolute;
+    font-size: clamp(14px, 2vw, 18px);
+    font-weight: 400;
+    font-family: "Copperplate", sans-serif;
+    color: #fff;
+  }
+  & p:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease-in-out;
+  }
+}
+.banner-inner-circle {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  border: 1px solid rgba(218, 160, 93, 0.5);
+  border-radius: 50%;
+  transform: translate(-13%, -10%);
+  background-color: rgba(28, 28, 28, 1);
+  z-index: -1;
+ 
+}
+
+.banner-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: circle7 5s linear infinite;
+}
+
+@keyframes circle7 {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(50px) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(50px)
+      rotate(-360deg);
+  }
+}
+
+.title {
+  font-size: clamp(1rem, 3vw, 2rem);
+  letter-spacing: 0.35px;
+  font-weight: bold;
+  font-family: "Copperplate", sans-serif;
+  color: #fff;
+}
+
+.subtitle {
+  color: #fff;
+  font-family: "Microsoft YaHei", sans-serif;
+  font-size: clamp(12px, 1vw, 14px);
+  font-weight: 300;
+  margin-bottom: 0 !important;
+}
