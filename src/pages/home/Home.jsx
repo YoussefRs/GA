@@ -6,17 +6,18 @@ import Banner from "./homeComponents/Banner/Banner";
 import Invitation from "./homeComponents/Invitation/Invitation";
 import Footer from "./homeComponents/Footer/Footer";
 
+import "./Home.css";
+
 function Home() {
   return (
-    <>
-      {" "}
+    <div className="home_container">
       <Navbar />
       <Hero />
       <About />
       <Banner />
       <Invitation />
       <Footer />
-    </>
+    </div>
   );
 }
 

@@ -13,13 +13,13 @@ function Hero() {
   return (
     <section className="hero">
       <div className="hero_section d-flex">
-        <div className="container d-flex align-items-center justify-content-center flex-column">
+        <div className="container-md px-md-0 px-4 d-flex align-items-center justify-content-center flex-column">
           <div className="text-content">
             <h5 data-aos={"slide-right"}>Welcome to gastro Angel</h5>
-            <h1 data-aos={"slide-right"} data-aos-delay="400">
+            <h1 data-aos={"slide-right"} data-aos-delay="400" className="mt-2">
               try the <span>BEST</span> <br />
-              <span style={{ color: "#DAA05D" }}>food</span> ...
             </h1>
+
             <div
               className="dot-outer-container"
               data-aos={"zoom-out"}
@@ -30,7 +30,11 @@ function Hero() {
               </div>
             </div>
           </div>
-          <div className="container container-mobile">
+          <div className="my-3 food_word">
+            <span style={{ color: "#DAA05D" }}>food</span>
+            <span>...</span>
+          </div>
+          <div className="container container-mobile d-sm-block d-none">
             <div className="el" data-aos={"slide-right"} data-aos-delay="800">
               <div className="el2">
                 <p>
@@ -123,6 +127,13 @@ function Hero() {
                   <p>BOOK !</p>
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="book-outer-container d-sm-none d-block ">
+            <div className="book-dot-container">
+              <div className="booking-dot"></div>
+              <div className="book-inner-circle"></div>
+              <p>BOOK !</p>
             </div>
           </div>
         </div>

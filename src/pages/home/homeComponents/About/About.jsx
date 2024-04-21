@@ -25,13 +25,13 @@ function About() {
         <div className="col-3 d-xl-block d-none bg-broch">
           <img src={broch} alt="" data-aos={"zoom-out"} data-aos-delay="800" />
         </div> */}
-        <div className="col-4 ps-0 fork_block_md d-flex">
+        <div className="col-4 ps-0 fork_block_md d-sm-flex d-none">
           <div className="text"><span>ABOUT US</span></div>
           <div className="img" data-aos={"zoom-out"} data-aos-delay="800">
             <img src={brochSM} alt="" className="img-fluid" />
           </div>
         </div>
-        <div className="col-4 bg-content">
+        <div className="col-sm-4 col-12 bg-content">
           <div className="text-content-about">
             <h1 data-aos={"slide-up"}>ABOUT US</h1>
             <img src={aboutLogo} alt="" data-aos={"slide-up"} />
@@ -57,7 +57,7 @@ function About() {
             </div>
           </div>
         </div>
-        <div className="col-4 bg-ma9la">
+        <div className="col-sm-4 col-12 bg-ma9la">
           <div
             className="ma9la-dot-outer-container"
             data-aos={"zoom-out"}

@@ -12,17 +12,19 @@ function Banner() {
   }, []);
   return (
     <div className="banner ">
-      <div className="row h-100">
-        <div className="col-md-9 col p-0">
-          <div className="row h-50">
-            <div className="col-md-9 col bg-wedding" data-aos={"flip-up"}>
-              <div className="container d-flex flex-column">
-                <div className="col-4 d-flex align-items-start justify-content-center flex-column">
+      <div className="row h-100 w-100">
+        <div className="col-md-9 col-12 p-0">
+          <div className="row row_height">
+            <div
+              className="col-md-8 col-12 bg-wedding px-2 py-5"
+              data-aos={"flip-up"}
+            >
+              <div className="container-md d-flex flex-column">
+                <div className="col-md-6 d-flex align-items-start justify-content-center flex-column">
                   <h1 className="title ">WEDDING</h1>
                   <p className="subtitle">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Recusandae sed reiciendis iste distinctio sunt omnis facilis
-                    nam, consequuntur sit
+                    Recusandae sed reiciendis
                   </p>
                   <div className="banner-outer-container">
                     <div className="banner-dot-container">
@@ -34,13 +36,15 @@ function Banner() {
                 </div>
               </div>
             </div>
-            <div className="col col-md-3 bg-breakfast" data-aos={"flip-right"}>
+            <div
+              className="col-12 col-md-4 bg-breakfast px-2 py-5"
+              data-aos={"flip-right"}
+            >
               <div className="d-flex align-items-start justify-content-center flex-column px-3">
                 <h1 className="title text-black">BREAKFAST</h1>
                 <p className="subtitle text-black">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae sed reiciendis iste distinctio sunt omnis facilis
-                  nam, consequuntur sit
+                  Recusandae sed
                 </p>
                 <div className="banner-outer-container">
                   <div className="banner-dot-container">
@@ -52,15 +56,17 @@ function Banner() {
               </div>
             </div>
           </div>
-          <div className="row h-50">
-            <div className="col col-md-3 bg-foo" data-aos={"flip-left"}>
-              <div className="container d-flex flex-column">
+          <div className="row row_height">
+            <div
+              className="col-12 col-md-4 bg-foo px-md-2 py-5"
+              data-aos={"flip-left"}
+            >
+              <div className="container-md d-flex flex-column">
                 <div className="d-flex align-items-start justify-content-center flex-column">
                   <h1 className="title text-black">BUFFET</h1>
                   <p className="subtitle text-black">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                    Recusandae sed reiciendis iste distinctio sunt omnis facilis
-                    nam, consequuntur sit
+                    Recusandae sed reiciendis
                   </p>
                   <div className="banner-outer-container">
                     <div className="banner-dot-container">
@@ -72,13 +78,15 @@ function Banner() {
                 </div>
               </div>
             </div>
-            <div className="col col-md-9 bg-wedding" data-aos={"flip-down"}>
-              <div className="col-md-5 col d-flex align-items-start justify-content-center flex-column px-3">
+            <div
+              className="col-12 col-md-8 bg-wedding px-2 py-5"
+              data-aos={"flip-down"}
+            >
+              <div className="col-md-6 d-flex align-items-start justify-content-center flex-column px-3">
                 <h1 className="title ">BUSINESS</h1>
                 <p className="subtitle">
                   Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                  Recusandae sed reiciendis iste distinctio sunt omnis facilis
-                  nam, consequuntur sit
+                  Recusandae sed
                 </p>
                 <div className="banner-outer-container">
                   <div className="banner-dot-container">
@@ -91,10 +99,14 @@ function Banner() {
             </div>
           </div>
         </div>
-        <div className="col-md-3 col bg-food" data-aos={"zoom-in"}>
+        <div className="col-md-3 col-12 bg-food py-5" data-aos={"zoom-in"}>
           <div className="container d-flex flex-column">
             <div className="d-flex align-items-center justify-content-center flex-column">
-              <h1 className="title ">FINGER FOOD</h1>
+              <h1 className="title ">
+                FINGER
+                <br />
+                FOOD
+              </h1>
               <div className="banner-outer-container">
                 <div className="banner-dot-container">
                   <div className="banner-dot"></div>

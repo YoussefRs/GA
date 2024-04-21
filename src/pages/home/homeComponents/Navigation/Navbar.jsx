@@ -29,7 +29,7 @@ function Navbar() {
 
   return (
     <div className={`${scrolled ? "wrap scrolled" : "wrap"} py-xl-0 py-3`}>
-      <div className="container-xl">
+      <div className="px-xl-5 px-4">
         <nav className="pullUp d-flex justify-content-between">
           <div className="align-items-center d-none d-md-flex ">
             <a href="#">
