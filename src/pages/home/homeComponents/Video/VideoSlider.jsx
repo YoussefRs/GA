@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./Invitation.css";
+import "./VideoSlider.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -29,7 +29,7 @@ const slides = [
   },
 ];
 
-function Invitation() {
+function VideoSlider() {
   const [scrollActive, setScrollActive] = useState(false);
 
   useEffect(() => {
@@ -170,4 +170,4 @@ function Invitation() {
   );
 }
 
-export default Invitation;
+export default VideoSlider;

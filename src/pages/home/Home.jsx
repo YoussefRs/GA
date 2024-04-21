@@ -3,10 +3,11 @@ import Hero from "./homeComponents/Hero/Hero";
 import Navbar from "./homeComponents/Navigation/Navbar";
 import About from "./homeComponents/About/About";
 import Banner from "./homeComponents/Banner/Banner";
-import Invitation from "./homeComponents/Invitation/Invitation";
 import Footer from "./homeComponents/Footer/Footer";
 
 import "./Home.css";
+import VideoSlider from "./homeComponents/Video/VideoSlider";
+import Booking from "./homeComponents/Booking/Booking";
 
 function Home() {
   return (
@@ -15,7 +16,8 @@ function Home() {
       <Hero />
       <About />
       <Banner />
-      <Invitation />
+      <VideoSlider />
+      <Booking />
       <Footer />
     </div>
   );

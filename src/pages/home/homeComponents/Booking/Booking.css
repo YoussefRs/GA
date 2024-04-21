@@ -1,0 +1,112 @@
+.booking {
+  @media (min-width: 576px) {
+    height: auto;
+  }
+  @media (max-width: 575px) {
+    height: auto;
+    padding: 5rem 1rem;
+  }
+  padding: 5rem;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../../assets/booking/booking-lg-bg.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+}
+
+.booking-inner-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 0 !important;
+
+  @media (max-width: 1200px) {
+    justify-content: center;
+  }
+
+  /* @media (max-width: 1200px) {
+    & .booking-box-left-wing,
+    & .booking-box-right-wing {
+      display: none;
+    }
+  } */
+}
+
+.booking-box {
+  border: 1px solid rgba(218, 160, 93, 0.2);
+  border-radius: 50px;
+  padding: 5rem 0;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  animation: float 2s ease-in-out infinite;
+
+  @media (max-width: 1200px) {
+    width: 50%;
+  }
+  @media (max-width: 991px) {
+    width: 100%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../../assets/booking/booking-bg.png);
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+  }
+
+  .booking-content {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 20px;
+    & img {
+      width: 100%;
+      margin: 0 auto;
+      object-fit: cover;
+
+      @media (min-width: 1400px) {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+.booking-box-left-wing,
+.booking-box-right-wing {
+  animation: float2 2s ease-in-out infinite;
+}
+
+@keyframes float2 {
+  0% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
