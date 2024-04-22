@@ -17,7 +17,7 @@ function Banner() {
     });
   }, []);
   return (
-    <div className="banner " id="banner">
+    <div className="banner ">
       <div className="row h-100 w-100">
         <div className="col-md-9 col-12 p-0">
           <div className="row row_height">
@@ -109,10 +109,7 @@ function Banner() {
             </div>
           </div>
         </div>
-        <div
-          className="col-md-3 col-12 bg-food py-5 bg_banner"
-          data-aos={"zoom-in"}
-        >
+        <div className="col-md-3 col-12 bg-food py-5 bg_banner" data-aos={"zoom-in"}>
           <div className="container d-flex flex-column">
             <div className="d-flex align-items-center justify-content-center flex-column">
               <h1 className="title ">
