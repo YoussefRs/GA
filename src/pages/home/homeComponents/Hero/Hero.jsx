@@ -11,7 +11,7 @@ function Hero() {
     });
   }, []);
   return (
-    <section className="hero">
+    <section className="hero" id='hero'>
       <div className="hero_section d-flex">
         <div className="container-md px-md-0 px-4 d-flex align-items-center justify-content-center flex-column">
           <div className="text-content">

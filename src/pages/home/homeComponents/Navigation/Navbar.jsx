@@ -522,35 +522,35 @@ function Navbar() {
                   </svg>
                 </span>
               </div>
-              <div className={`lang_menu ${hideLangMenu ? "hide" : ""}`}>
-                <div
-                  className="item mb-1 pointer"
-                  onClick={() => {
-                    setSelectedLang("En");
-                    setHideLangMenu(true);
-                  }}
-                >
-                  En
+                <div className={`lang_menu ${hideLangMenu ? "hide" : ""}`}>
+                  <div
+                    className="item mb-1 pointer"
+                    onClick={() => {
+                      setSelectedLang("En");
+                      setHideLangMenu(true);
+                    }}
+                  >
+                    En
+                  </div>
+                  <div
+                    className="item mb-1 pointer"
+                    onClick={() => {
+                      setSelectedLang("Fr");
+                      setHideLangMenu(true);
+                    }}
+                  >
+                    Fr
+                  </div>
+                  <div
+                    className="item pointer"
+                    onClick={() => {
+                      setSelectedLang("De");
+                      setHideLangMenu(true);
+                    }}
+                  >
+                    De
+                  </div>
                 </div>
-                <div
-                  className="item mb-1 pointer"
-                  onClick={() => {
-                    setSelectedLang("Fr");
-                    setHideLangMenu(true);
-                  }}
-                >
-                  Fr
-                </div>
-                <div
-                  className="item pointer"
-                  onClick={() => {
-                    setSelectedLang("De");
-                    setHideLangMenu(true);
-                  }}
-                >
-                  De
-                </div>
-              </div>
             </a>
           </div>
           <div className="d-flex align-items-center d-md-none">
@@ -713,7 +713,6 @@ function Navbar() {
                   <span>Contact</span>
                 </div>
               </div>
-              
             </Offcanvas.Body>
           </Offcanvas>
         </nav>
