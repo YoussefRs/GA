@@ -1,14 +1,9 @@
 import React from "react";
 import "./Testimonials.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
 
 function Testimonials() {
   const testimonials = [
