@@ -15,7 +15,7 @@ function About() {
     });
   }, []);
   return (
-    <div className="about">
+    <div className="about" id="about">
       <div className=" row about-ctr">
         {/* <div className="col-1 d-xl-block d-none bg-about">
           <span>

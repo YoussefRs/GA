@@ -17,7 +17,7 @@ function Banner() {
     });
   }, []);
   return (
-    <div className="banner ">
+    <div className="banner" id="banner">
       <div className="row h-100 w-100">
         <div className="col-md-9 col-12 p-0">
           <div className="row row_height">
