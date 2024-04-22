@@ -3,12 +3,6 @@ import "./Banner.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-import busIcon from "../../../../assets/banner/business-icon.png";
-import wedIcon from "../../../../assets/banner/wedding-icon.png";
-import breakIcon from "../../../../assets/banner/breakfast-icon.png";
-import fooIcon from "../../../../assets/banner/foo-icon.png";
-import foodIcon from "../../../../assets/banner/food-icon.png";
-
 function Banner() {
   useEffect(() => {
     AOS.init({
@@ -22,7 +16,7 @@ function Banner() {
         <div className="col-md-9 col-12 p-0">
           <div className="row row_height">
             <div
-              className="col-md-8 col-12 bg-wedding px-2 py-5 bg_banner"
+              className="col-md-8 col-12 bg-wedding px-2 py-5"
               data-aos={"flip-up"}
             >
               <div className="container-md d-flex flex-column">
@@ -41,10 +35,9 @@ function Banner() {
                   </div>
                 </div>
               </div>
-              <img src={wedIcon} alt="" className="img-fluid banner_icon" />
             </div>
             <div
-              className="col-12 col-md-4 bg-breakfast px-2 py-5 bg_banner"
+              className="col-12 col-md-4 bg-breakfast px-2 py-5"
               data-aos={"flip-right"}
             >
               <div className="d-flex align-items-start justify-content-center flex-column px-3">
@@ -61,12 +54,11 @@ function Banner() {
                   </div>
                 </div>
               </div>
-              <img src={breakIcon} alt="" className="img-fluid banner_icon" />
             </div>
           </div>
           <div className="row row_height">
             <div
-              className="col-12 col-md-4 bg-foo px-md-2 py-5 bg_banner order-1 order-md-0"
+              className="col-12 col-md-4 bg-foo px-md-2 py-5"
               data-aos={"flip-left"}
             >
               <div className="container-md d-flex flex-column">
@@ -85,10 +77,9 @@ function Banner() {
                   </div>
                 </div>
               </div>
-              <img src={fooIcon} alt="" className="img-fluid banner_icon" />
             </div>
             <div
-              className="col-12 col-md-8 bg-wedding px-2 py-5 bg_banner order-0 order-md-1"
+              className="col-12 col-md-8 bg-wedding px-2 py-5"
               data-aos={"flip-down"}
             >
               <div className="col-md-6 d-flex align-items-start justify-content-center flex-column px-3">
@@ -105,11 +96,10 @@ function Banner() {
                   </div>
                 </div>
               </div>
-              <img src={busIcon} alt="" className="img-fluid banner_icon" />
             </div>
           </div>
         </div>
-        <div className="col-md-3 col-12 bg-food py-5 bg_banner" data-aos={"zoom-in"}>
+        <div className="col-md-3 col-12 bg-food py-5" data-aos={"zoom-in"}>
           <div className="container d-flex flex-column">
             <div className="d-flex align-items-center justify-content-center flex-column">
               <h1 className="title ">
@@ -126,7 +116,6 @@ function Banner() {
               </div>
             </div>
           </div>
-          <img src={foodIcon} alt="" className="img-fluid banner_icon" />
         </div>
       </div>
     </div>

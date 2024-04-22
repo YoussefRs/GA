@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import "./About.css";
-// import broch from "../../../../assets/about/broch.png";
+import broch from "../../../../assets/about/broch.png";
 import brochSM from "../../../../assets/about/brochSM.png";
 import ma9la from "../../../../assets/about/ma9la.png";
 import aboutLogo from "../../../../assets/about/about-logo.png";
