@@ -62,9 +62,9 @@
     align-items: center;
   }
   .logo img {
-    clip-path: inset(0 0 0 0);
+    clipPath: inset(0 0 0 0);
     margin-top: 0;
-    transition: 0.5s clip-path 0ms, 0.5s margin-top 0ms;
+    transition: 0.5s clipPath 0ms, 0.5s margin-top 0ms;
     @media (min-width: 992px) {
       width: 200px;
       height: 75px;
@@ -86,22 +86,22 @@
 
 .wrap.scrolled {
   background: #000;
-  transition: 0.5s clip-path 0ms, 0.5s margin-top 0ms;
+  transition: 0.5s clipPath 0ms, 0.5s margin-top 0ms;
   .logo img {
     @media (min-width: 992px) {
-      clip-path: inset(60px 0 0 0);
+      clipPath: inset(60px 0 0 0);
       margin-top: -65px;
     }
     @media (min-width: 860px) and (max-width: 992px) {
-      clip-path: inset(55px 0 0 0);
+      clipPath: inset(55px 0 0 0);
       margin-top: -60px;
     }
     @media (min-width: 768px) and (max-width: 860px) {
-      clip-path: inset(35px 0 0 0);
+      clipPath: inset(35px 0 0 0);
       margin-top: -40px;
     }
     @media (max-width: 768px) {
-      clip-path: inset(35px 0 0 0);
+      clipPath: inset(35px 0 0 0);
       margin-top: -30px;
     }
   }
