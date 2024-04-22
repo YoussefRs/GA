@@ -1,3 +1,5 @@
+
+
 .footer-container {
   position: relative;
   width: 100%;
@@ -27,7 +29,7 @@
   justify-content: center;
   align-items: center;
   text-align: left;
-  background-color: #0b0b0c;
+  background-color: #0B0B0C;
   box-shadow: 0px 0px 19px 5px rgba(0, 0, 0, 0.19);
 }
 
@@ -35,16 +37,48 @@
   background: url(../../../../assets/footer/footer.png) no-repeat center;
   background-size: cover;
   height: 100%;
-  @media (min-width: 576px) {
-    padding: 2rem 8rem;
-  }
-  @media (max-width: 576px) {
-    padding: 2rem;
+  padding: 2rem 8rem;
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1); /* Invert the color of the icon */
   }
 
   & h2 {
     color: #fff;
+    position: relative;
+    margin-bottom: 3rem;
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0%;
+      border: 1px solid #daa05d;
+      z-index: 1;
+      width: 90px;
+      height: 90px;
+      margin-right: auto;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      overflow: hidden;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      z-index: 2;
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      margin-right: auto;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
   }
+  
 }
 
 .right {
@@ -67,7 +101,13 @@
   font-family: "Microsoft YaHei", sans-serif;
   margin-bottom: 22px;
   transition: 0.3s;
+  color: #fff !important;
 }
+
+input::placeholder {
+  color: #fff ; 
+}
+
 
 .field:hover {
   background-color: rgba(0, 0, 0, 0.1);

@@ -8,6 +8,7 @@ import Footer from "./homeComponents/Footer/Footer";
 import "./Home.css";
 import VideoSlider from "./homeComponents/Video/VideoSlider";
 import Booking from "./homeComponents/Booking/Booking";
+import Testimonials from "./homeComponents/Testimonials/Testimonials";
 
 function Home() {
   return (
@@ -18,6 +19,7 @@ function Home() {
       <Banner />
       <VideoSlider />
       <Booking />
+      <Testimonials />
       <Footer />
     </div>
   );
