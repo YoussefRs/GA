@@ -548,7 +548,7 @@ function Navbar() {
                 />
               </svg>
             </div>
-            <a
+            {/* <a
               className={`lang_menu_toggler ${
                 hideLangMenu ? "" : "border-bottom-0"
               } ${scrolled ? "" : "bordered"}`}
@@ -630,7 +630,7 @@ function Navbar() {
                   De
                 </div>
               </div>
-            </a>
+            </a> */}
           </div>
         </nav>
       </div>
