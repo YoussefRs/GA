@@ -15,7 +15,7 @@ function About() {
     });
   }, []);
   return (
-    <div className="about">
+    <div className="about" id="about">
       <div className=" row about-ctr">
         {/* <div className="col-1 d-xl-block d-none bg-about">
           <span>
@@ -26,7 +26,9 @@ function About() {
           <img src={broch} alt="" data-aos={"zoom-out"} data-aos-delay="800" />
         </div> */}
         <div className="col-4 ps-0 fork_block_md d-sm-flex d-none">
-          <div className="text"><span>ABOUT US</span></div>
+          <div className="text">
+            <span>ABOUT US</span>
+          </div>
           <div className="img" data-aos={"zoom-out"} data-aos-delay="800">
             <img src={brochSM} alt="" className="img-fluid" />
           </div>

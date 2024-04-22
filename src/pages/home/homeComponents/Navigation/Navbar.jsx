@@ -2,6 +2,7 @@ import React from "react";
 import "./Navbar.css";
 import { useState, useEffect } from "react";
 import logo from "../../../../assets/home/logo.png";
+import { Offcanvas } from "react-bootstrap";
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,6 +27,23 @@ function Navbar() {
 
   const [hideLangMenu, setHideLangMenu] = useState(true);
   const [selectedLang, setSelectedLang] = useState("En");
+
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const toggleShow = () => setShow((s) => !s);
+
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const offset = 75; // Adjust this value as needed
+      const offsetPosition = section.offsetTop - offset;
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <div className={`${scrolled ? "wrap scrolled" : "wrap"} py-xl-0 py-3`}>
@@ -536,7 +554,7 @@ function Navbar() {
             </a>
           </div>
           <div className="d-flex align-items-center d-md-none">
-            <div className="sidebar_toggler">
+            <div className="sidebar_toggler" onClick={toggleShow}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="bi bi-list"
@@ -632,6 +650,72 @@ function Navbar() {
               </div>
             </a> */}
           </div>
+          <Offcanvas
+            show={show}
+            onHide={handleClose}
+            scroll
+            placement="end"
+            className="sidebar"
+          >
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title>
+                <img src={logo} alt="" className="img-fluid logo" />
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+              <div className="links">
+                <div
+                  onClick={() => {
+                    handleClose();
+                    scrollToSection("hero");
+                  }}
+                >
+                  <span>Home</span>
+                </div>
+                <div
+                  onClick={() => {
+                    handleClose();
+                    scrollToSection("about");
+                  }}
+                >
+                  <span>About</span>
+                </div>
+                <div
+                  onClick={() => {
+                    handleClose();
+                    scrollToSection("banner");
+                  }}
+                >
+                  <span>Catering</span>
+                </div>
+                <div
+                  onClick={() => {
+                    handleClose();
+                    scrollToSection("roto");
+                  }}
+                >
+                  <span>Live</span>
+                </div>
+                <div
+                  onClick={() => {
+                    handleClose();
+                    scrollToSection("booking");
+                  }}
+                >
+                  <span>Guest</span>
+                </div>
+                <div
+                  onClick={() => {
+                    handleClose();
+                    scrollToSection("footer");
+                  }}
+                >
+                  <span>Contact</span>
+                </div>
+              </div>
+              
+            </Offcanvas.Body>
+          </Offcanvas>
         </nav>
       </div>
     </div>

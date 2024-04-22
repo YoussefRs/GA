@@ -4,7 +4,7 @@ import logo from "../../../../assets/home/logo.png";
 
 function Footer() {
   return (
-    <div className="footer-container">
+    <div className="footer-container" id="footer">
       <div className="contact-box">
         <div className="left">
           <h2>BOOK A TABLE</h2>

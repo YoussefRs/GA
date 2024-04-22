@@ -14,7 +14,7 @@ function Booking() {
     });
   }, []);
   return (
-    <div className="booking ">
+    <div className="booking" id="booking">
       <div
         className="container-md px-md-0 px-4 justify-content-center booking-inner-box"
         data-aos={"slide-up"}
