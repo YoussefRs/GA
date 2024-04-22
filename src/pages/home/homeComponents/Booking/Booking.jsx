@@ -3,6 +3,7 @@ import "./Booking.css";
 import aboutLogo from "../../../../assets/about/about-logo.png";
 import leftWing from "../../../../assets/booking/wing-left-large.png";
 import rightWing from "../../../../assets/booking/wing-right-large.png";
+import booking from "../../../../assets/booking/booking.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -15,7 +16,10 @@ function Booking() {
   }, []);
   return (
     <div className="booking ">
-      <div className="container-md px-md-0 px-4 d-flex justify-content-center booking-inner-box" data-aos={"slide-up"}>
+      <div
+        className="container-md px-md-0 px-4 justify-content-center booking-inner-box d-sm-flex d-none"
+        data-aos={"slide-up"}
+      >
         <div className="booking-box-left-wing">
           <img src={leftWing} alt="" />
         </div>
@@ -42,6 +46,11 @@ function Booking() {
           <img src={rightWing} alt="" />
         </div>
       </div>
+      <img
+        src={booking}
+        alt=""
+        className="img-fluid d-sm-none d-block img_sm"
+      />
     </div>
   );
 }
