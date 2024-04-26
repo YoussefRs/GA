@@ -3,8 +3,13 @@ import "./Navbar.css";
 import { useState, useEffect } from "react";
 import logo from "../../../../assets/home/logo.png";
 import { Offcanvas } from "react-bootstrap";
+import { useTranslation } from "react-i18next";
+import i18n from "i18next";
 
 function Navbar() {
+  const {t} = useTranslation();
+  const {item1,item2,item3,item4,item5,item6} = t("navbar")
+
   const [scrolled, setScrolled] = useState(false);
   const [hoveredLink, setHoveredLink] = useState(false);
 
@@ -26,7 +31,7 @@ function Navbar() {
   }, []);
 
   const [hideLangMenu, setHideLangMenu] = useState(true);
-  const [selectedLang, setSelectedLang] = useState("En");
+  const [selectedLang, setSelectedLang] = useState("De");
 
   const [show, setShow] = useState(false);
 
@@ -43,6 +48,10 @@ function Navbar() {
         behavior: "smooth",
       });
     }
+  };
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
   };
 
   return (
@@ -84,7 +93,7 @@ function Navbar() {
                   fill="#DAA05D"
                 />
               </svg>
-              <span>Home</span>
+              <span>{item1} </span>
               <svg
                 width="31"
                 height="19"
@@ -153,7 +162,7 @@ function Navbar() {
                   fill="#DAA05D"
                 />
               </svg>
-              <span>About</span>
+              <span>{item2}</span>
               <svg
                 width="31"
                 height="19"
@@ -222,7 +231,7 @@ function Navbar() {
                   fill="#DAA05D"
                 />
               </svg>
-              <span>Catering</span>
+              <span>{item3}</span>
               <svg
                 width="31"
                 height="19"
@@ -296,7 +305,7 @@ function Navbar() {
                   fill="#DAA05D"
                 />
               </svg>
-              <span>Live</span>
+              <span>{item4}</span>
               <svg
                 width="31"
                 height="19"
@@ -365,7 +374,7 @@ function Navbar() {
                   fill="#DAA05D"
                 />
               </svg>
-              <span>Guest</span>
+              <span>{item5}</span>
               <svg
                 width="31"
                 height="19"
@@ -434,7 +443,7 @@ function Navbar() {
                   fill="#DAA05D"
                 />
               </svg>
-              <span>Contact</span>
+              <span>{item6}</span>
               <svg
                 width="31"
                 height="19"
@@ -528,6 +537,7 @@ function Navbar() {
                   onClick={() => {
                     setSelectedLang("En");
                     setHideLangMenu(true);
+                    changeLanguage("En")
                   }}
                 >
                   En
@@ -537,6 +547,7 @@ function Navbar() {
                   onClick={() => {
                     setSelectedLang("De");
                     setHideLangMenu(true);
+                    changeLanguage("De")
                   }}
                 >
                   De
@@ -662,7 +673,7 @@ function Navbar() {
                       scrollToSection("hero");
                     }}
                   >
-                    <span>Home</span>
+                    <span>{item1}</span>
                   </div>
                   <div
                     onClick={() => {
@@ -670,7 +681,7 @@ function Navbar() {
                       scrollToSection("about");
                     }}
                   >
-                    <span>About</span>
+                    <span>{item2}</span>
                   </div>
                   <div
                     onClick={() => {
@@ -678,7 +689,7 @@ function Navbar() {
                       scrollToSection("banner");
                     }}
                   >
-                    <span>Catering</span>
+                    <span>{item3}</span>
                   </div>
                   <div
                     onClick={() => {
@@ -686,7 +697,7 @@ function Navbar() {
                       scrollToSection("roto");
                     }}
                   >
-                    <span>Live</span>
+                    <span>{item4}</span>
                   </div>
                   <div
                     onClick={() => {
@@ -694,7 +705,7 @@ function Navbar() {
                       scrollToSection("booking");
                     }}
                   >
-                    <span>Guest</span>
+                    <span>{item5}</span>
                   </div>
                   <div
                     onClick={() => {
@@ -702,7 +713,7 @@ function Navbar() {
                       scrollToSection("footer");
                     }}
                   >
-                    <span>Contact</span>
+                    <span>{item6}</span>
                   </div>
                 </div>
                 <a
