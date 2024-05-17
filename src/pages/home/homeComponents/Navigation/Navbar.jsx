@@ -5,10 +5,11 @@ import logo from "../../../../assets/home/logo.png";
 import { Offcanvas } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
+import { Link } from "react-router-dom";
 
 function Navbar() {
-  const {t} = useTranslation();
-  const {item1,item2,item3,item4,item5,item6} = t("navbar")
+  const { t } = useTranslation();
+  const { item1, item2, item3, item4, item5, item6 } = t("navbar");
 
   const [scrolled, setScrolled] = useState(false);
   const [hoveredLink, setHoveredLink] = useState(false);
@@ -56,10 +57,10 @@ function Navbar() {
 
   return (
     <div className={`${scrolled ? "wrap scrolled" : "wrap"} py-xl-0 py-3`}>
-      <div className="px-xl-5 px-4">
+      <div className="nav_inner_container">
         <nav className="pullUp d-flex justify-content-between">
           <div className="align-items-center d-none d-md-flex ">
-            <a href="#">
+            <Link to={"/"}>
               <svg
                 width="31"
                 height="19"
@@ -127,8 +128,8 @@ function Navbar() {
                   fill="#DAA05D"
                 />
               </svg>
-            </a>
-            <a href="#">
+            </Link>
+            <Link to={"/about"}>
               <svg
                 width="31"
                 height="19"
@@ -196,7 +197,7 @@ function Navbar() {
                   fill="#DAA05D"
                 />
               </svg>
-            </a>
+            </Link>
             <a href="#">
               <svg
                 width="31"
@@ -537,7 +538,7 @@ function Navbar() {
                   onClick={() => {
                     setSelectedLang("En");
                     setHideLangMenu(true);
-                    changeLanguage("En")
+                    changeLanguage("En");
                   }}
                 >
                   En
@@ -547,7 +548,7 @@ function Navbar() {
                   onClick={() => {
                     setSelectedLang("De");
                     setHideLangMenu(true);
-                    changeLanguage("De")
+                    changeLanguage("De");
                   }}
                 >
                   De

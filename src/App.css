@@ -1,0 +1,9 @@
+:root {
+    @media (min-width: 1400px) {
+        --section-width: 1300px;
+    }
+
+    @media (min-width: 1200px) and (max-width: 1399px) {
+        --section-width: 1100px;
+    }
+}
