@@ -38,13 +38,13 @@ export default function Achievements() {
     },
     {
       img: ach4,
-      number: 4,
-      name: "Fourth Achievement",
+      number: 5,
+      name: "Fifth Achievement",
     },
     {
       img: ach4,
-      number: 4,
-      name: "Fourth Achievement",
+      number: 6,
+      name: "Sixth Achievement",
     },
   ];
 
