@@ -51,7 +51,7 @@ export default function Achievements() {
   return (
     <div className="achievements_container">
       <div className="_inner_box">
-        <AboutTitle title={"our achievements"} />
+        <AboutTitle title={"UNSERE ERFOLGE"} />
         <div className="achievements_box">
           <Swiper
             className="mySwiper"

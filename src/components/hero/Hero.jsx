@@ -17,10 +17,10 @@ export default function Hero({ title, bgImg }) {
   return (
     <div className="reusable_hero" style={{ backgroundImage: `url(${bgImg})` }}>
       <div className="title_container">
-          <p data-aos={"slide-right"}>Welcome to Gastro Angel</p>
-          <p data-aos={"slide-right"} data-aos-delay="400">
-            {title}
-          </p>
+        <p data-aos={"slide-right"}>Willkommen Bei Gastro Angel</p>
+        <p data-aos={"slide-right"} data-aos-delay="400">
+          {title}
+        </p>
       </div>
     </div>
   );

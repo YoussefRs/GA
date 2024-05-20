@@ -9,11 +9,11 @@ export default function AboutSection() {
     <div className="about_section">
       <div className="about_section_inner">
         <div className="main_title">
-          <span>About us</span>
+          <span>ÜBER UNS</span>
         </div>
         <img src={broch} className="broch" alt="" />
         <div className="description">
-          <AboutTitle title={"about us"} />
+          <AboutTitle title={"ÜBER UNS"} />
           <p className="sub_title">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.

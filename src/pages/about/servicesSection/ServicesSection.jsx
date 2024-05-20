@@ -115,7 +115,7 @@ export default function ServicesSection() {
   return (
     <div className="services_section">
       <div className="services_section_inner">
-        <AboutTitle2 title={"Our Special Services"} />
+        <AboutTitle2 title={"Unsere besonderen Dienstleistungen"} />
         <div className="services_box">
           {services.map((srv, i) => (
             <div className="service_box" key={i}>

@@ -13,7 +13,7 @@ import Footer from "../home/homeComponents/Footer/Footer";
 export default function About() {
   return (
     <div className="about_container">
-      <Hero title={"ABOUT US"} bgImg={bg} />
+      <Hero title={"ÜBER UNS"} bgImg={bg} />
       <AboutSection />
       <ServicesSection />
       <Achievements />
