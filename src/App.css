@@ -6,4 +6,11 @@
     @media (min-width: 1200px) and (max-width: 1399px) {
         --section-width: 1100px;
     }
+
+    @media (min-width: 992px) and (max-width: 1199px) {
+        --section-width: 850px;
+    }
+
+    --primary-dark: #101010;
+    --secondary-dark: #181818;
 }

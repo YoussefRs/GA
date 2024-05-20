@@ -1,0 +1,86 @@
+.achievements_container {
+    background-color: var(--secondary-dark);
+
+    & ._inner_box {
+        width: var(--section-width);
+        margin: 0 auto;
+        padding: 3rem 0;
+    }
+
+    & .achievements_box {
+        margin-top: 2rem;
+        width: 100%;
+
+        & .swiper-slide {
+            width: max-content;
+            margin-right: 1.5rem;
+
+            width: 300px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        & .achievement_box {
+            width: 100%;
+            height: 350px;
+            /* display: inline-block; */
+            /* Display achievements in a row */
+            /* vertical-align: top; */
+            position: relative;
+
+
+
+            & .img {
+                & img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background-image: url("../../assets//achievements/backdrop.png");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    right: 0;
+                    top: 0;
+                }
+            }
+
+            & .label {
+                display: flex;
+                align-items: center;
+                padding-left: 1.5rem;
+                position: absolute;
+                bottom: 1.5rem;
+                width: 100%;
+
+                & span:first-child {
+                    color: var(--secondary-dark);
+                    text-shadow:
+                        -1px -1px 0 #DAA05D,
+                        1px -1px 0 #DAA05D,
+                        -1px 1px 0 #DAA05D,
+                        1px 1px 0 #DAA05D;
+                    font-size: 3rem;
+                    font-weight: 700;
+                }
+
+                & span:last-child {
+                    color: #fff;
+                    font-size: 1.5rem;
+                    font-weight: 600;
+                    margin-left: .5rem;
+                    text-overflow: ellipsis;
+                    text-wrap: nowrap;
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+}

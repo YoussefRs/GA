@@ -1,8 +1,8 @@
 import React from "react";
 import "./styles.css";
 
-import logo from "../../../assets/about/about-logo2.png";
 import broch from "../../../assets/about/broch.png";
+import AboutTitle from "../elements/AboutTitle";
 
 export default function AboutSection() {
   return (
@@ -13,13 +13,7 @@ export default function AboutSection() {
         </div>
         <img src={broch} className="broch" alt="" />
         <div className="description">
-          <div className="title">
-            <span>About us</span>
-            <div className="divider">
-              <img src={logo} alt="" />
-              <div className=""></div>
-            </div>
-          </div>
+          <AboutTitle title={"about us"} />
           <p className="sub_title">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.

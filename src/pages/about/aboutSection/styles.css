@@ -1,5 +1,5 @@
 .about_section {
-    background-color: #181818;
+    background-color: var(--secondary-dark);
     position: relative;
     display: flex;
 
@@ -9,7 +9,7 @@
         height: 100%;
         width: 40%;
         left: 0;
-        background-color: #101010;
+        background-color: var(--primary-dark);
         z-index: 0;
     }
 
@@ -19,7 +19,7 @@
         height: 100%;
         width: 40%;
         right: 0;
-        background-color: #181818;
+        background-color: var(--secondary-dark);
         z-index: 0;
     }
 
@@ -41,7 +41,7 @@
         margin: 0 auto;
 
         & .main_title {
-            background-color: #101010;
+            background-color: var(--primary-dark);
             width: 250px;
             border: none;
             outline: none;
@@ -62,31 +62,13 @@
             flex: 1;
             border: none;
             outline: none;
-            background-color: #181818;
-            padding: 3rem 0 3rem 250px;
+            background-color: var(--secondary-dark);
 
-            & .title {
-                width: max-content;
-
-                & span {
-                    font-size: 4rem;
-                    text-transform: uppercase;
-                }
-
-                & .divider {
-                    display: flex;
-                    align-items: center;
-
-                    & img {
-                        margin-right: 1rem;
-                    }
-
-                    & div {
-                        flex: 1;
-                        height: 1px;
-                        background-color: #daa05d;
-                    }
-                }
+            @media (min-width: 1400px) {
+                padding: 3rem 0 3rem 250px;
+            }
+            @media (min-width: 1200px) and (max-width: 1399px) {
+                padding: 3rem 0 3rem 250px;
             }
 
             & .sub_title {

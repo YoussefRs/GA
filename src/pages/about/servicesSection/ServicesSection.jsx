@@ -3,6 +3,7 @@ import "./styles.css";
 import logo from "../../../assets/about/about-logo2.png";
 
 import breakfast from "../../../assets/about/breakfast.png";
+import AboutTitle2 from "../elements/AboutTitle2";
 
 export default function ServicesSection() {
   const services = [
@@ -114,14 +115,7 @@ export default function ServicesSection() {
   return (
     <div className="services_section">
       <div className="services_section_inner">
-        <div className="title_container">
-          <p className="title">Our Special Services</p>
-          <div className="divider">
-            <div className=""></div>
-            <img src={logo} alt="" />
-            <div className=""></div>
-          </div>
-        </div>
+        <AboutTitle2 title={"Our Special Services"} />
         <div className="services_box">
           {services.map((srv, i) => (
             <div className="service_box" key={i}>

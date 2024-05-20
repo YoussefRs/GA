@@ -9,7 +9,7 @@
     height: calc(80vh + 220px);
   }
   width: 100vw;
-  background-color: #181818;
+  background-color: var(--secondary-dark);
   display: flex;
   align-items: center; /* Centers the text vertically */
   justify-content: center; /* Centers the text horizontally */

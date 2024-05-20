@@ -10,7 +10,6 @@
     & .title_container {
         width: var(--section-width);
         margin: 0 auto;
-
         position: relative;
 
         &::before {
@@ -42,6 +41,8 @@
             color: #daa05d;
             margin-left: 0.5rem;
             margin-bottom: 0;
+            text-align: start;
+
         }
 
         & p:last-child {
@@ -51,6 +52,8 @@
             font-family: "Copperplate", sans-serif;
             color: #fff;
             margin-left: 0.5rem;
+            text-align: start;
+
         }
     }
 }

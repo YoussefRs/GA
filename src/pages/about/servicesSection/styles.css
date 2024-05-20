@@ -1,38 +1,10 @@
 .services_section {
-    background-color: #101010;
+    background-color: var(--primary-dark);
 
     & .services_section_inner {
         width: var(--section-width);
         margin: 0 auto;
         padding: 3rem 0;
-
-        & .title_container {
-            width: max-content;
-            margin: 0 auto;
-
-            & .title {
-                font-size: 3rem;
-                text-align: center;
-                margin-bottom: 0;
-            }
-
-            & .divider {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                & img {
-                    margin: 0 1rem;
-                }
-
-                & div {
-                    flex: 1;
-                    height: 1px;
-                    background-color: #daa05d;
-                }
-            }
-        }
-
         & .services_box {
             display: flex;
             flex-wrap: wrap;
@@ -48,14 +20,12 @@
                 &:last-of-type {
                     margin-right: 0;
                 }
-
-
-
                 & .icon {
                     width: max-content;
                     margin-bottom: .75rem;
 
-                    & svg, & img {
+                    & svg,
+                    & img {
                         height: 100px;
                     }
                 }
