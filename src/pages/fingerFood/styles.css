@@ -1,0 +1,76 @@
+.fingerfood_container {
+    & .fingerfood_content {
+        background-color: var(--secondary-dark);
+
+        & ._inner {
+            width: var(--section-width);
+            margin: 0 auto;
+            display: flex;
+
+            padding: 3rem 0;
+
+            & ._left_box,
+            & ._right_box {
+                & img {
+                    &:first-child {
+                        width: 350px;
+                    }
+
+                    &:last-child {
+                        background-color: var(--primary-gold);
+                        width: 150px;
+                        height: 150px;
+                    }
+                }
+            }
+
+            & ._left_box {
+                position: relative;
+
+                & img {
+                    &:first-child {
+                        margin-top: 75px;
+                    }
+
+                    &:last-child {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+                }
+            }
+
+            & ._right_box {
+                position: relative;
+
+                & img {
+                    &:first-child {}
+
+                    &:last-child {
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                    }
+                }
+            }
+
+            & ._center_box {
+                margin: 0 auto;
+                width: 450px;
+
+                & p {
+                    &:nth-child(2) {
+                        margin-top: 1rem;
+                    }
+
+                    &:last-child {
+                        color: #fff;
+                        opacity: .5;
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+}

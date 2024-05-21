@@ -307,9 +307,30 @@ function Navbar() {
                 >
                   {subItem2}
                 </p>
-                <p className="_item">{subItem3}</p>
-                <p className="_item">{subItem4}</p>
-                <p className="_item">{subItem5}</p>
+                <p
+                  className="_item"
+                  onClick={() => {
+                    navigate("/fingerfood");
+                  }}
+                >
+                  {subItem3}
+                </p>
+                <p
+                  className="_item"
+                  onClick={() => {
+                    navigate("/buffet");
+                  }}
+                >
+                  {subItem4}
+                </p>
+                <p
+                  className="_item"
+                  onClick={() => {
+                    navigate("/business");
+                  }}
+                >
+                  {subItem5}
+                </p>
               </div>
             </a>
           </div>
