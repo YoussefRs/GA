@@ -1,0 +1,77 @@
+.wedding_container {
+    & .wedding_intro {
+
+        background-color: var(--secondary-dark);
+        display: flex;
+        /* align-items: center; */
+        padding: 3rem 0 1.5rem;
+
+        & ._left_box,
+        & ._right_box {
+            width: 600px;
+        }
+
+        & ._center_box {
+            /* flex: 1; */
+            width: 500px;
+            margin: 0 auto;
+            padding: 0 3rem;
+
+            & p:last-child {
+                color: #fff;
+                text-align: center;
+                opacity: .5;
+                font-weight: 300;
+                font-size: 17px;
+            }
+        }
+
+        & ._left_box {
+            display: flex;
+            flex-direction: column-reverse;
+
+            & img {
+                &:first-child {}
+
+                &:last-child {
+                    width: 200px;
+                    height: 200px;
+                    margin: 0 auto -20px;
+                    background-color: var(--primary-gold);
+                }
+            }
+
+        }
+
+        & ._right_box {
+            &>div {
+                width: max-content;
+                position: relative;
+
+                & img {
+                    &:first-child {}
+
+                    &:last-child {
+                        position: absolute;
+                        width: 200px;
+                        right: 0;
+                        bottom: -50px;
+                        height: 200px;
+                        margin: 0 auto -20px;
+                        background-color: var(--primary-gold);
+                    }
+                }
+            }
+        }
+
+    }
+
+    & .wedding_dishes {
+        background-color: var(--primary-dark);
+        padding: 3rem 0 1.5rem;
+        & ._inner {
+            width: var(--section-width);
+            margin: 0 auto;
+        }
+    }
+}

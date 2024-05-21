@@ -19,6 +19,66 @@
   & .nav_inner_container {
     width: var(--section-width);
     margin: 0 auto;
+
+    & .links_list {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &:first-child {
+        & a:last-child {
+          position: relative;
+
+          & span {
+            &:hover {
+              cursor: pointer;
+            }
+          }
+
+          & .food_dropmenu {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            color: #fff;
+            background-color: var(--secondary-dark);
+
+            border-radius: 0 0 20px 20px;
+            font-size: 10px;
+
+            max-height: 0;
+            top: 100%;
+            overflow: hidden;
+            transition: all .5s ease-in-out;
+
+            &.show {
+              max-height: 160px;
+              transition: all .5s ease-in-out;
+            }
+
+            & ._item {
+              padding: 0 1rem;
+              text-wrap: nowrap;
+
+              &:first-child {
+                padding-top: 1rem;
+              }
+
+              &:last-child {
+                padding-bottom: 1rem;
+              }
+
+              &:hover {
+                opacity: .8;
+                text-decoration: underline;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   & nav a {
@@ -47,7 +107,9 @@
       font-size: 10px;
     }
 
-    @media (min-width: 992px) and (max-width: 1199px) {}
+    @media (min-width: 992px) and (max-width: 1199px) {
+      font-size: 10px;
+    }
 
     font-weight: 400;
     position: relative;
@@ -92,7 +154,9 @@
       width: 180px;
     }
 
-    @media (min-width: 992px) and (max-width: 1199px) {}
+    @media (min-width: 992px) and (max-width: 1199px) {
+      width: 180px;
+    }
 
     @media (min-width: 768px) and (max-width: 991px) {
       width: 200px;
@@ -149,9 +213,7 @@
   }
 }
 
-.lang_menu_toggler.bordered {
-  border: 1px solid #fff;
-}
+
 
 .lang_menu_toggler .icon {
   margin-bottom: 0.25rem;
@@ -171,17 +233,16 @@
   top: 100%;
   max-height: 300px;
   width: 100%;
-  border: 1px solid #fff;
-  border-top: none;
+  background-color: var(--secondary-dark);
+  border-radius: 0 0 10px 10px;
   text-align: center;
   overflow: hidden;
-  transition: max-height 1s ease-in-out;
+  transition: all 0.5s ease-in;
 }
 
 .lang_menu_toggler .lang_menu.hide {
   max-height: 0;
-  opacity: 0;
-  transition: max-height 0.5s ease-in-out;
+  transition: all 0.5s ease-out;
 }
 
 .lang_menu_toggler .lang_menu_sm {
@@ -205,6 +266,13 @@
 
 .lang_menu_toggler .lang_menu .item {
   color: #fff;
+  &:first-child {
+    padding-top: .5rem;
+  }
+
+  &:last-child {
+    padding-bottom: .5rem;
+  }
 }
 
 .lang_menu_toggler .lang_menu .item:hover {

@@ -5,14 +5,27 @@ import logo from "../../../../assets/home/logo.png";
 import { Offcanvas } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
   const { t } = useTranslation();
-  const { item1, item2, item3, item4, item5, item6 } = t("navbar");
+  const {
+    item1,
+    item2,
+    item3,
+    item4,
+    item5,
+    item6,
+    subItem1,
+    subItem2,
+    subItem3,
+    subItem4,
+  } = t("navbar");
 
   const [scrolled, setScrolled] = useState(false);
   const [hoveredLink, setHoveredLink] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     function handleScroll() {
@@ -55,11 +68,13 @@ function Navbar() {
     i18n.changeLanguage(lng);
   };
 
+  const [toggleFoodDropmenu, setToggleFoodDropmenu] = useState(false);
+
   return (
     <div className={`${scrolled ? "wrap scrolled" : "wrap"} py-xl-0 py-3`}>
       <div className="nav_inner_container">
         <nav className="pullUp d-flex justify-content-between">
-          <div className="align-items-center d-none d-md-flex ">
+          <div className="links_list">
             <Link to={"/"}>
               <svg
                 width="31"
@@ -198,80 +213,96 @@ function Navbar() {
                 />
               </svg>
             </Link>
-            <a href="#">
-              <svg
-                width="31"
-                height="19"
-                viewBox="0 0 31 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="display-svg"
+            <a
+              onClick={() => {
+                setToggleFoodDropmenu(!toggleFoodDropmenu);
+              }}
+            >
+              <div>
+                <svg
+                  width="31"
+                  height="19"
+                  viewBox="0 0 31 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="display-svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M31 18.6035C28.4196 16.7779 27.1975 12.796 26.8978 10.78C26.5281 8.29064 26.6051 5.95193 26.9406 3.51726C27.4567 -0.23308 24.8755 -1.49482 19.9723 2.27851C14.606 6.41031 6.80638 14.2219 0 10.2661C9.98383 17.7295 17.785 6.32863 21.758 3.21273C21.8078 3.17308 21.8592 3.13501 21.9106 3.09853C23.1179 2.11197 25.4741 1.00646 25.397 2.96371C25.2733 2.1548 24.5377 2.13576 23.7912 2.43474C24.4598 2.49105 25.0289 2.97878 24.9899 4.08984C24.9012 6.61492 25.0187 8.52538 25.443 10.4874C26.2836 14.3749 28.2273 17.9857 31 19"
+                    fill="#DAA05D"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M24.9992 11.4846C23.7988 7.24606 23.8323 13.1545 22.5844 15.8817C21.857 17.4711 21.2696 18.0105 20 18.91C22.2413 19.2964 23.0286 18.424 23.7405 16.5724C24.639 14.2357 23.7521 9.9788 25 11.4846"
+                    fill="#DAA05D"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M25 8.24597C24.8975 6.347 24.2555 5.6476 23.2914 6.16535C22.8105 6.42383 22.302 6.98079 21.761 7.66179C19.233 10.8443 16.2934 17.2742 11 18.6875C17.6676 20.472 20.1874 14.2213 22.3256 9.90006C23.2597 8.0123 23.8186 6.42783 25 8.24517"
+                    fill="#DAA05D"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M24.9925 5.79625C25.1288 1.77797 23.3996 2.67814 21.009 4.83585C17.1717 8.29786 11.9603 15.4683 5 16.1926C13.0363 19.7148 17.6264 10.7733 20.8702 7.42859C23.0305 5.20115 23.8764 3.30493 24.9925 5.79625Z"
+                    fill="#DAA05D"
+                  />
+                </svg>
+                <span>{item3}</span>
+                <svg
+                  width="31"
+                  height="19"
+                  viewBox="0 0 31 19"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="display-svg"
+                >
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M0 18.6035C2.58041 16.7779 3.80251 12.796 4.1022 10.78C4.47194 8.29064 4.39488 5.95193 4.05939 3.51726C3.5433 -0.23308 6.1245 -1.49482 11.0277 2.27851C16.394 6.41031 24.1936 14.2219 31 10.2661C21.0162 17.7295 13.215 6.32863 9.24201 3.21273C9.19219 3.17308 9.14082 3.13501 9.08944 3.09853C7.88213 2.11197 5.5259 1.00646 5.60296 2.96371C5.72673 2.1548 6.46232 2.13576 7.20881 2.43474C6.54016 2.49105 5.97115 2.97878 6.01007 4.08984C6.09881 6.61492 5.98127 8.52538 5.55704 10.4874C4.71636 14.3749 2.77268 17.9857 0 19"
+                    fill="#DAA05D"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M6.00078 11.4846C7.20118 7.24606 7.16773 13.1545 8.41559 15.8817C9.14299 17.4711 9.73036 18.0105 11 18.91C8.75867 19.2964 7.97137 18.424 7.25953 16.5724C6.36097 14.2357 7.24786 9.9788 6 11.4846"
+                    fill="#DAA05D"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M6 8.24597C6.10252 6.347 6.74446 5.6476 7.70861 6.16535C8.18946 6.42383 8.69797 6.98079 9.23903 7.66179C11.767 10.8443 14.7066 17.2742 20 18.6875C13.3324 20.472 10.8126 14.2213 8.67438 9.90006C7.74034 8.0123 7.18138 6.42783 6 8.24517"
+                    fill="#DAA05D"
+                  />
+                  <path
+                    fillRule="evenodd"
+                    clipRule="evenodd"
+                    d="M6.00753 5.79625C5.87119 1.77797 7.60043 2.67814 9.991 4.83585C13.8283 8.29786 19.0397 15.4683 26 16.1926C17.9637 19.7148 13.3736 10.7733 10.1298 7.42859C7.96947 5.20115 7.12362 3.30493 6.00753 5.79625Z"
+                    fill="#DAA05D"
+                  />
+                </svg>
+              </div>
+              <div
+                className={`food_dropmenu ${toggleFoodDropmenu ? "show" : ""}`}
               >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M31 18.6035C28.4196 16.7779 27.1975 12.796 26.8978 10.78C26.5281 8.29064 26.6051 5.95193 26.9406 3.51726C27.4567 -0.23308 24.8755 -1.49482 19.9723 2.27851C14.606 6.41031 6.80638 14.2219 0 10.2661C9.98383 17.7295 17.785 6.32863 21.758 3.21273C21.8078 3.17308 21.8592 3.13501 21.9106 3.09853C23.1179 2.11197 25.4741 1.00646 25.397 2.96371C25.2733 2.1548 24.5377 2.13576 23.7912 2.43474C24.4598 2.49105 25.0289 2.97878 24.9899 4.08984C24.9012 6.61492 25.0187 8.52538 25.443 10.4874C26.2836 14.3749 28.2273 17.9857 31 19"
-                  fill="#DAA05D"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M24.9992 11.4846C23.7988 7.24606 23.8323 13.1545 22.5844 15.8817C21.857 17.4711 21.2696 18.0105 20 18.91C22.2413 19.2964 23.0286 18.424 23.7405 16.5724C24.639 14.2357 23.7521 9.9788 25 11.4846"
-                  fill="#DAA05D"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M25 8.24597C24.8975 6.347 24.2555 5.6476 23.2914 6.16535C22.8105 6.42383 22.302 6.98079 21.761 7.66179C19.233 10.8443 16.2934 17.2742 11 18.6875C17.6676 20.472 20.1874 14.2213 22.3256 9.90006C23.2597 8.0123 23.8186 6.42783 25 8.24517"
-                  fill="#DAA05D"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M24.9925 5.79625C25.1288 1.77797 23.3996 2.67814 21.009 4.83585C17.1717 8.29786 11.9603 15.4683 5 16.1926C13.0363 19.7148 17.6264 10.7733 20.8702 7.42859C23.0305 5.20115 23.8764 3.30493 24.9925 5.79625Z"
-                  fill="#DAA05D"
-                />
-              </svg>
-              <span>{item3}</span>
-              <svg
-                width="31"
-                height="19"
-                viewBox="0 0 31 19"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                className="display-svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M0 18.6035C2.58041 16.7779 3.80251 12.796 4.1022 10.78C4.47194 8.29064 4.39488 5.95193 4.05939 3.51726C3.5433 -0.23308 6.1245 -1.49482 11.0277 2.27851C16.394 6.41031 24.1936 14.2219 31 10.2661C21.0162 17.7295 13.215 6.32863 9.24201 3.21273C9.19219 3.17308 9.14082 3.13501 9.08944 3.09853C7.88213 2.11197 5.5259 1.00646 5.60296 2.96371C5.72673 2.1548 6.46232 2.13576 7.20881 2.43474C6.54016 2.49105 5.97115 2.97878 6.01007 4.08984C6.09881 6.61492 5.98127 8.52538 5.55704 10.4874C4.71636 14.3749 2.77268 17.9857 0 19"
-                  fill="#DAA05D"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M6.00078 11.4846C7.20118 7.24606 7.16773 13.1545 8.41559 15.8817C9.14299 17.4711 9.73036 18.0105 11 18.91C8.75867 19.2964 7.97137 18.424 7.25953 16.5724C6.36097 14.2357 7.24786 9.9788 6 11.4846"
-                  fill="#DAA05D"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M6 8.24597C6.10252 6.347 6.74446 5.6476 7.70861 6.16535C8.18946 6.42383 8.69797 6.98079 9.23903 7.66179C11.767 10.8443 14.7066 17.2742 20 18.6875C13.3324 20.472 10.8126 14.2213 8.67438 9.90006C7.74034 8.0123 7.18138 6.42783 6 8.24517"
-                  fill="#DAA05D"
-                />
-                <path
-                  fillRule="evenodd"
-                  clipRule="evenodd"
-                  d="M6.00753 5.79625C5.87119 1.77797 7.60043 2.67814 9.991 4.83585C13.8283 8.29786 19.0397 15.4683 26 16.1926C17.9637 19.7148 13.3736 10.7733 10.1298 7.42859C7.96947 5.20115 7.12362 3.30493 6.00753 5.79625Z"
-                  fill="#DAA05D"
-                />
-              </svg>
+                <p className="_item" onClick={() => {
+                  navigate("/wedding")
+                }}>{subItem1}</p>
+                <p className="_item">{subItem2}</p>
+                <p className="_item">{subItem3}</p>
+                <p className="_item">{subItem4}</p>
+              </div>
             </a>
           </div>
           <div className="logo py-2">
             <img src={logo} alt="Tooth 911" />
           </div>
-          <div className="align-items-center d-none d-md-flex ">
+          <div className="links_list">
             <a href="#">
               <svg
                 width="31"

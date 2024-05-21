@@ -6,6 +6,7 @@
     & span {
         font-size: 3rem;
         text-transform: uppercase;
+        font-family: "Copperplate", sans-serif;
     }
 
     & .divider {
@@ -31,6 +32,7 @@
     &>p {
         font-weight: 600;
         font-size: 3rem;
+        font-family: "Copperplate", sans-serif;
         text-align: center;
         margin-bottom: 0;
         color: #fff;
@@ -52,4 +54,11 @@
             background-color: #daa05d;
         }
     }
+}
+
+.sub_title {
+    font-family: "Freestyle Script", cursive;
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
 }
