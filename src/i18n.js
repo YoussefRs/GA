@@ -20,6 +20,11 @@ i18n
             item4: "LIVE KOCHEN",
             item5: "GÄSTE",
             item6: "KONTACT",
+            subItem1: "HOCHZEIT",
+            subItem2: "FRÜHSTÜCK",
+            subItem3: "FINGERFOOD",
+            subItem4: "BUFFET",
+            subItem5: "Geschäft",
           },
           hero: {
             Desc: "Willkommen Bei Gastro Angel",
@@ -64,6 +69,11 @@ i18n
             item4: "LIVE COOKING",
             item5: "GUESTS",
             item6: "CONTACT",
+            subItem1: "WEDDING",
+            subItem2: "BREAKFAST",
+            subItem3: "FINGER FOOD",
+            subItem4: "BUFFET",
+            subItem5: "BUSINESS",
           },
           hero: {
             desc: "Welcome to Gastro Angel",

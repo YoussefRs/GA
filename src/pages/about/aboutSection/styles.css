@@ -1,0 +1,88 @@
+.about_section {
+    background-color: var(--secondary-dark);
+    position: relative;
+    display: flex;
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 40%;
+        left: 0;
+        background-color: var(--primary-dark);
+        z-index: 0;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 40%;
+        right: 0;
+        background-color: var(--secondary-dark);
+        z-index: 0;
+    }
+
+    & .about_section_inner {
+        display: flex;
+        z-index: 2;
+        overflow-y: hidden;
+
+        position: relative;
+
+        & .broch {
+            position: absolute;
+            height: 125%;
+            width: 500px;
+            left: 0;
+        }
+
+        width: var(--section-width);
+        margin: 0 auto;
+
+        & .main_title {
+            background-color: var(--primary-dark);
+            width: 250px;
+            border: none;
+            outline: none;
+            display: flex;
+            align-items: center;
+
+            & span {
+                writing-mode: vertical-lr;
+                transform: rotate(180deg);
+                display: inline-block;
+                font-weight: 700;
+                font-size: 4rem;
+                text-transform: uppercase;
+            }
+        }
+
+        & .description {
+            flex: 1;
+            border: none;
+            outline: none;
+            background-color: var(--secondary-dark);
+
+            @media (min-width: 1400px) {
+                padding: 3rem 0 3rem 250px;
+            }
+            @media (min-width: 1200px) and (max-width: 1399px) {
+                padding: 3rem 0 3rem 250px;
+            }
+
+            & .sub_title {
+                font-family: "Freestyle Script", cursive;
+                color: #fff;
+                margin: 1rem 0 2rem;
+                font-size: 1.5rem;
+            }
+
+            & .text {
+                color: #fff;
+                font-weight: 300;
+                opacity: .8;
+            }
+        }
+    }
+}
