@@ -24,6 +24,7 @@ i18n
             subItem2: "FRÜHSTÜCK",
             subItem3: "FINGERFOOD",
             subItem4: "BUFFET",
+            subItem5: "Geschäft",
           },
           hero: {
             Desc: "Willkommen Bei Gastro Angel",
@@ -72,6 +73,7 @@ i18n
             subItem2: "BREAKFAST",
             subItem3: "FINGER FOOD",
             subItem4: "BUFFET",
+            subItem5: "BUSINESS",
           },
           hero: {
             desc: "Welcome to Gastro Angel",

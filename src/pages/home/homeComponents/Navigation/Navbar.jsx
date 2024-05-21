@@ -20,6 +20,7 @@ function Navbar() {
     subItem2,
     subItem3,
     subItem4,
+    subItem5,
   } = t("navbar");
 
   const [scrolled, setScrolled] = useState(false);
@@ -290,12 +291,25 @@ function Navbar() {
               <div
                 className={`food_dropmenu ${toggleFoodDropmenu ? "show" : ""}`}
               >
-                <p className="_item" onClick={() => {
-                  navigate("/wedding")
-                }}>{subItem1}</p>
-                <p className="_item">{subItem2}</p>
+                <p
+                  className="_item"
+                  onClick={() => {
+                    navigate("/wedding");
+                  }}
+                >
+                  {subItem1}
+                </p>
+                <p
+                  className="_item"
+                  onClick={() => {
+                    navigate("/breakfast");
+                  }}
+                >
+                  {subItem2}
+                </p>
                 <p className="_item">{subItem3}</p>
                 <p className="_item">{subItem4}</p>
+                <p className="_item">{subItem5}</p>
               </div>
             </a>
           </div>

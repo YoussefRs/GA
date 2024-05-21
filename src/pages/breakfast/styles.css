@@ -1,0 +1,32 @@
+.breakfast_container {
+    & ._breakfast_content {
+        background-color: var(--primary-dark);
+
+        & ._inner {
+            width: var(--section-width);
+            padding: 3rem 0;
+            display: flex;
+
+            & ._left_box {
+                & img {
+                    width: 650px;
+                }
+
+                margin-right: 50px;
+            }
+
+            & ._right_box {
+                & p:nth-child(2) {
+                    text-align: start;
+                    margin-top: 2rem;
+                }
+
+                & p:last-child {
+                    color: #fff;
+                    opacity: .5;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
