@@ -7,12 +7,31 @@
             padding: 3rem 0;
             display: flex;
 
-            & ._left_box {
-                & img {
-                    width: 650px;
+            @media (max-width: 991px) {
+                flex-direction: column-reverse;
+                margin: 0 auto;
+
+                & ._right_box {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            @media (min-width: 992px) {
+                & ._left_box,
+                & ._right_box {
+                    width: calc(100% / 2);
                 }
 
-                margin-right: 50px;
+                & ._left_box {
+                    margin-right: 50px;
+                }
+            }
+
+
+            & ._left_box {
+                & img {
+                    width: 100%;
+                }
             }
 
             & ._right_box {

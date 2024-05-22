@@ -17,13 +17,33 @@
   z-index: 5;
 
   & .nav_inner_container {
-    width: var(--section-width);
+    @media (min-width: 768px) {
+      width: var(--section-width);
+    }
+
+    @media (max-width: 767px) {
+      width: 95%;
+    }
+
     margin: 0 auto;
 
     & .links_list {
       display: flex;
       align-items: center;
-      justify-content: space-between;
+
+      @media (max-width: 767px) {
+        display: none;
+      }
+
+      & a {
+        @media (min-width: 768px) and (max-width: 992px) {
+          margin-right: 1rem;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
 
       &:first-child {
         & a:last-child {
@@ -103,13 +123,13 @@
       font-size: 12px;
     }
 
-    @media (min-width: 1200px) and (max-width: 1399px) {
+    @media (min-width: 768px) and (max-width: 1399px) {
       font-size: 10px;
     }
 
-    @media (min-width: 992px) and (max-width: 1199px) {
+    /* @media (min-width: 992px) and (max-width: 1199px) {
       font-size: 10px;
-    }
+    } */
 
     font-weight: 400;
     position: relative;
@@ -159,8 +179,11 @@
     }
 
     @media (min-width: 768px) and (max-width: 991px) {
-      width: 200px;
-      /* height: 75px; */
+      width: 150px;
+    }
+
+    @media (max-width: 767px) {
+      width: 150px;
     }
   }
 }
@@ -177,24 +200,21 @@
 
     @media (min-width: 1200px) and (max-width: 1399px) {
       width: 180px;
+      clip-path: inset(50px 0 0 0);
+      margin-top: -63px;
     }
 
     @media (min-width: 992px) and (max-width: 1199px) {
-      clip-path: inset(65px 0 0 0);
-      margin-top: -75px;
+      clip-path: inset(49px 0 0 0);
+      margin-top: -57px;
     }
 
-    @media (min-width: 860px) and (max-width: 992px) {
-      clip-path: inset(55px 0 0 0);
-      margin-top: -65px;
+    @media (min-width: 768px) and (max-width: 991px) {
+      clip-path: inset(45px 0 0 0);
+      margin-top: -50px;
     }
 
-    @media (min-width: 768px) and (max-width: 860px) {
-      clip-path: inset(60px 0 0 0);
-      margin-top: -67px;
-    }
-
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
       clip-path: inset(42px 0 0 0);
       margin-top: -45px;
     }
@@ -266,6 +286,7 @@
 
 .lang_menu_toggler .lang_menu .item {
   color: #fff;
+
   &:first-child {
     padding-top: .5rem;
   }
@@ -284,21 +305,30 @@
   cursor: pointer;
 }
 
-.sidebar_toggler {
-  /* margin-right: 2rem; */
-  background-color: #daa05d;
-  border: 1px solid #daa05d !important;
-  padding: 0.87rem 1.1rem;
+.sidebar_toggler_container {
+  display: flex;
+  align-items: center;
 
-  &:hover {
-    background-color: transparent !important;
-    border: 1px solid #daa05d !important;
+  @media (min-width: 768px) {
+    display: none;
   }
 
-  & svg {
-    width: 25px;
-    height: 25px;
-    fill: #fff;
+  & .sidebar_toggler {
+    /* margin-right: 2rem; */
+    background-color: #daa05d;
+    border: 1px solid #daa05d !important;
+    padding: 0.87rem 1.1rem;
+
+    &:hover {
+      background-color: transparent !important;
+      border: 1px solid #daa05d !important;
+    }
+
+    & svg {
+      width: 25px;
+      height: 25px;
+      fill: #fff;
+    }
   }
 }
 
@@ -324,7 +354,7 @@
     display: flex;
     flex-direction: column;
 
-    & div {
+    & div:not(._sidebar_lang_toggler, .lang_menu_sm, .food_dropmenu_sm) {
       margin-bottom: 4vh;
       color: #fff;
       text-decoration: none;
@@ -336,6 +366,66 @@
         padding-left: 1rem;
         transition: padding 0.5s ease;
       }
+    }
+  }
+
+  & ._sidebar_lang_toggler {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    transition: border 1s ease-in;
+
+    &.hided {
+      border-bottom: 1px solid var(--secondary-dark);
+      transition: border 1s ease-out;
+    }
+
+    width: 70px;
+    padding-bottom: .25rem;
+    margin-bottom: .25rem;
+  }
+
+  & .lang_menu_sm {
+    text-align: center;
+    width: 70px;
+    border: 1px solid #fff;
+    /* border-radius: 0 0 15px 15px; */
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease-in;
+
+    &.hide {
+      max-height: 150px;
+      transition: all .5s ease-out;
+    }
+  }
+
+  & .food_dropmenu_sm {
+    text-align: center;
+    width: 125px;
+    border: 1px solid #fff;
+    color: #fff;
+    /* border-radius: 0 0 15px 15px; */
+    max-height: 0;
+    overflow: hidden;
+    transition: all .5s ease-in;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    & ._item {
+      &:first-child {
+        margin-top: .5rem;
+      }
+      &:last-child {
+        margin-bottom: .5rem;
+      }
+    }
+
+    &.hide {
+      max-height: 210px;
+      transition: all .5s ease-out;
     }
   }
 }

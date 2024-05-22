@@ -5,40 +5,104 @@
         width: var(--section-width);
         margin: 0 auto;
         padding: 3rem 0;
+
         & .services_box {
             display: flex;
             flex-wrap: wrap;
             margin-top: 2rem;
 
             & .service_box {
-                width: calc((100% - 12rem)/5);
-                margin-right: 3rem;
+
+                @media (min-width: 1200px) {
+                    width: calc((100% - 12rem)/5);
+                    margin-right: 3rem;
+
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+
+                }
+
+                @media (min-width: 992px) and (max-width: 1199px) {
+                    width: calc((100% - 8rem)/5);
+                    margin-right: 2rem;
+
+                    &:last-of-type {
+                        margin-right: 0;
+                    }
+                }
+
+                @media (min-width: 768px) and (max-width: 991px) {
+                    width: calc((100% - 4rem)/3);
+                    margin-right: 2rem;
+
+                    &:last-of-type,
+                    &:nth-child(3) {
+                        margin-right: 0;
+                    }
+                }
+
+                margin-top: 1rem;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
 
-                &:last-of-type {
-                    margin-right: 0;
-                }
                 & .icon {
                     width: max-content;
                     margin-bottom: .75rem;
 
                     & svg,
                     & img {
-                        height: 100px;
+                        @media (min-width: 1200px) {
+                            height: 100px;
+                            width: 100px;
+                        }
+
+                        @media (min-width: 992px) and (max-width: 1199px) {
+                            height: 75px;
+                            width: 75px;
+                        }
+
+                        @media (min-width: 768px) and (max-width: 991px) {
+                            height: 75px;
+                            width: 75px;
+                        }
                     }
                 }
 
                 & .label {
-                    font-size: 1.5rem;
+
+                    @media (min-width: 1200px) {
+                        font-size: 1.5rem;
+                    }
+
+                    @media (min-width: 992px) and (max-width: 1199px) {
+                        font-size: 1rem;
+                    }
+
+                    @media (min-width: 768px) and (max-width: 991px) {
+                        font-size: 1.2rem;
+                    }
+
                     color: #fff;
                     text-transform: uppercase;
                     font-weight: 700;
                 }
 
                 & .description {
-                    font-size: .8rem;
+
+                    @media (min-width: 1200px) {
+                        font-size: .8rem;
+                    }
+
+                    @media (min-width: 992px) and (max-width: 1199px) {
+                        font-size: .65rem;
+                    }
+
+                    @media (min-width: 768px) and (max-width: 991px) {
+                        font-size: .8rem;
+                    }
+
                     color: #fff;
                     opacity: .5;
                     text-align: center;

@@ -3,6 +3,7 @@ import "./styles.css";
 
 import broch from "../../../assets/about/broch.png";
 import AboutTitle from "../elements/AboutTitle";
+import SubTitle from "../elements/SubTitle";
 
 export default function AboutSection() {
   return (
@@ -14,10 +15,12 @@ export default function AboutSection() {
         <img src={broch} className="broch" alt="" />
         <div className="description">
           <AboutTitle title={"ÜBER UNS"} />
-          <p className="sub_title">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
-          </p>
+          <SubTitle
+            content={
+              "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
+            }
+            alignText={"start"}
+          />
           <p className="text">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text

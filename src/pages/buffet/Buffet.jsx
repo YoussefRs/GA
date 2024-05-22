@@ -28,7 +28,10 @@ export default function Buffet() {
           </div>
           <div className="_center_box">
             <AboutTitle2 title={"buffet"} />
-            <SubTitle content={"Lorem Ipsum is simply dummy text of the"} />
+            <SubTitle
+              content={"Lorem Ipsum is simply dummy text of the"}
+              alignText={"center"}
+            />
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text

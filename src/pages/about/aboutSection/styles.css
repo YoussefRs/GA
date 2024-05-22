@@ -2,6 +2,7 @@
     background-color: var(--secondary-dark);
     position: relative;
     display: flex;
+    overflow: hidden;
 
     &::after {
         content: "";
@@ -33,7 +34,19 @@
         & .broch {
             position: absolute;
             height: 125%;
-            width: 500px;
+
+            @media (min-width: 1200px) {
+                width: 500px;
+            }
+
+            @media (min-width: 992px) and (max-width: 1199px) {
+                width: 350px;
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                width: 300px;
+            }
+
             left: 0;
         }
 
@@ -42,11 +55,22 @@
 
         & .main_title {
             background-color: var(--primary-dark);
-            width: 250px;
             border: none;
             outline: none;
             display: flex;
             align-items: center;
+
+            @media (min-width: 1200px) {
+                width: 250px;
+            }
+
+            @media (min-width: 992px) and (max-width: 1199px) {
+                width: 175px;
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                width: 150px;
+            }
 
             & span {
                 writing-mode: vertical-lr;
@@ -65,10 +89,19 @@
             background-color: var(--secondary-dark);
 
             @media (min-width: 1400px) {
-                padding: 3rem 0 3rem 250px;
+                padding: 3rem 250px 3rem;
             }
+
             @media (min-width: 1200px) and (max-width: 1399px) {
-                padding: 3rem 0 3rem 250px;
+                padding: 3rem 100px 3rem 150px;
+            }
+
+            @media (min-width: 992px) and (max-width: 1199px) {
+                padding: 3rem 50px 3rem 150px;
+            }
+
+            @media (min-width: 768px) and (max-width: 991px) {
+                padding: 3rem 0 3rem 100px;
             }
 
             & .sub_title {

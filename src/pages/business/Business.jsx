@@ -1,5 +1,4 @@
 import React from "react";
-import "./styles.css";
 
 import bg from "../../assets/business/bg.png";
 import bg2 from "../../assets/business/bg2.png";
@@ -16,14 +15,14 @@ import SubTitle from "../about/elements/SubTitle";
 export default function Business() {
   return (
     <div className="breakfast_container">
-      <Hero bgImg={bg} title={"CATERING/BREAKFAST"} />
+      <Hero bgImg={bg} title={"CATERING/BUSINESS"} />
       <div className="_breakfast_content">
         <div className="_inner">
           <div className="_left_box">
             <img src={food} alt="" />
           </div>
           <div className="_right_box">
-            <AboutTitle title={"breakfast"} />
+            <AboutTitle title={"business"} />
             <SubTitle content={"Lorem Ipsum is simply dummy text of the"} />
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting

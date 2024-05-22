@@ -10,7 +10,14 @@
         padding: 2rem 0;
 
         & .reserve_form {
-            width: 573px;
+            @media (min-width: 768px) {
+                width: 573px;
+            }
+
+            @media (max-width: 767px) {
+                width: var(--section-width);
+                margin: 0 auto;
+            }
 
             & ._form {
                 display: flex;
@@ -55,8 +62,9 @@
             }
 
             & ._button {
-                margin: 5rem 0 3rem;
+                margin: 5rem 0 3rem 25px;
                 position: relative;
+                height: 100px;
 
 
                 &::before {
@@ -77,9 +85,9 @@
                     height: 75px;
                     border-radius: 50%;
                     border: 1px solid var(--primary-gold);
-                    /* background: var(--secondary-dark); */
-                    top: -20px;
-                    left: -20px;
+                    background: var(--secondary-dark);
+                    top: -21px;
+                    left: -21px;
                 }
 
                 & ._dot {
@@ -91,18 +99,25 @@
                     left: 0;
                     top: -21px;
                     transform: translateX(-50%);
+                    z-index: 2;
                 }
 
                 & button {
                     background: unset;
                     border: none;
-                    z-index: 100;
+                    position: absolute;
+                    z-index: 10;
 
                     & span {
                         font-size: 2rem;
                         text-transform: uppercase;
                         font-weight: 600;
                         color: #fff;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        scale: 1.1;
                     }
                 }
             }

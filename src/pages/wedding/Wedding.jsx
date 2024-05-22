@@ -229,7 +229,10 @@ export default function Wedding() {
         </div>
         <div className="_center_box">
           <AboutTitle2 title={"Wedding"} />
-          <SubTitle content={"Lorem Ipsum is simply dummy text of the"} />
+          <SubTitle
+            content={"Lorem Ipsum is simply dummy text of the"}
+            alignText={"center"}
+          />
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -294,6 +297,7 @@ export default function Wedding() {
                 content={
                   "Lorem Ipsum is simply dummy text of the printing and typesetting industry."
                 }
+                alignText={"start"}
               />
               <p className="text">
                 Lorem Ipsum is simply dummy text of the printing and typesetting

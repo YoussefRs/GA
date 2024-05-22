@@ -63,7 +63,7 @@ function Testimonials() {
         breakpoint: 768,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
         },
       },
@@ -76,9 +76,10 @@ function Testimonials() {
       },
     ],
   };
+
   return (
     <div className="testimonials-container">
-      <div className="container px-5">
+      <div className="container _inner">
         <div className="slider-container">
           <h1>{title}</h1>
           <Slider {...settings}>
